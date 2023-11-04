@@ -1,0 +1,18 @@
+<table border="2">
+<tr>
+<th>id</th>
+<th>name</th>
+<th> Editer </th>
+</tr>
+   <tr>  {% for a in sabrina %} </tr>
+        <td>{{ a.id }}</td>
+        <td> {{ a.name }}</td>
+            <td>
+            <a href="{{ path('app_edit',{'id':a.id}) }}">modifier
+                        <a href="{{ path('app_delete',{'id':a.id}) }}">supprimer
+
+            </td>
+
+    {% endfor %}
+
+</table>

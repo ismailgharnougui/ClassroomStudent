@@ -1,0 +1,19 @@
+<table border="2">
+<tr>
+<th>NSC</th>
+<th>Email</th>
+<th> Classroom Name </th>
+<th>Editer </th>
+<th>Supprimer </th>
+</tr>
+   <tr>  {% for a in students %} </tr>
+        <td>{{ a.nsc }}</td>
+        <td> {{ a.email }}</td>
+                <td> {{ a.Classroom.name }}</td>
+
+        <td>    <a href="{{ path('app_editS',{'nsc':a.nsc}) }}">modifier </td>
+        <td>    <a href="{{ path('app_deleteS',{'nsc':a.nsc}) }}">supprimer </td>
+
+    {% endfor %}
+
+</table>
